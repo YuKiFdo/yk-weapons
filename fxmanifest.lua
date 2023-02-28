@@ -1,5 +1,6 @@
 fx_version 'cerulean'
 games {'gta5'}
+author 'ilyaas#5276'
 
 files{
 	'metas/**/*.meta'
