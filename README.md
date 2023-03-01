@@ -10,8 +10,6 @@
     ['weapon_sledgehammer'] 		 = {['name'] = 'weapon_sledgehammer', 	 		['label'] = 'Sledge Hammer', 			['weight'] = 9000, 		['type'] = 'weapon', 	['ammotype'] = nil,						['image'] = 'weapon_sledgehammer.png', 		['unique'] = true, 		['useable'] = false,	['description'] = 'A Sledge Hammer to destroy peoples heads... jk... unless...'},
     ['weapon_karambit'] 			 = {['name'] = 'weapon_karambit', 			 	['label'] = 'Karambit', 				['weight'] = 1000, 		['type'] = 'weapon', 	['ammotype'] = nil,						['image'] = 'weapon_karambit.png', 		    ['unique'] = true, 		['useable'] = false,	['description'] = 'A short knife with a pointed and edged blade, used as a weapon'},
     ['weapon_keyboard'] 			 = {['name'] = 'weapon_keyboard', 				['label'] = 'Keyboard', 				['weight'] = 3000, 		['type'] = 'weapon', 	['ammotype'] = nil,			    	['image'] = 'weapon_keyboard.png', 			['unique'] = true, 		['useable'] = false, 	['description'] = 'YOU CAN USE THIS TO HIT YOUR SON xD'},
-    -- GGC Custom Weapons -- Lethals
-    ['weapon_beanbagshotgun'] 		 = {['name'] = 'weapon_beanbagshotgun', 		['label'] = 'Non-Lethal Shotgun', 		['weight'] = 1000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_SHOTGUN',			['image'] = 'weapon_beanbagshotgun.png', 	['unique'] = true, 		['useable'] = false, 	['description'] = 'A Non-lethal version of the Remington 870'},
 	-- GGC Custom Weapons -- Hand Guns
 	['weapon_glock17'] 				 = {['name'] = 'weapon_glock17', 				['label'] = 'Glock-17', 				['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_glock17.png', 			['unique'] = true, 		['useable'] = false,	['description'] = 'The Glock 17 is the original 9×19mm Parabellum model, with a standard magazine capacity of 17 rounds.'},
 	['weapon_glock18c'] 			 = {['name'] = 'weapon_glock18c', 				['label'] = 'Glock-18C', 				['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_glock18c.png', 			['unique'] = true, 		['useable'] = false,	['description'] = 'The Glock 18C is a selective-fire variant of the Glock 17.'},
@@ -46,8 +44,6 @@
     [`weapon_sledgehammer`] 		= {['name'] = 'weapon_sledgehammer', 		['label'] = 'Sledge Hammer', 			['weapontype'] = 'Melee',			['ammotype'] = nil,						['damagereason'] = 'Melee killed / Whacked / Executed / Beat down / Murdered / Battered'},
     [`weapon_karambit`] 			= {['name'] = 'weapon_karambit', 			['label'] = 'Karambit', 				['weapontype'] = 'Melee',			['ammotype'] = nil,						['damagereason'] = 'Knifed / Stabbed / Eviscerated'},
     [`weapon_keyboard`] 			= {['name'] = 'weapon_keyboard', 			['label'] = 'Keyboard', 				['weapontype'] = 'Melee',			['ammotype'] = nil,						['damagereason'] = 'Melee killed / Whacked / Executed / Beat down / Murdered / Battered'},
-    -- GGC Custom Weapons -- Lethals
-	[`weapon_beanbagshotgun`]		 = {['name'] = 'weapon_beanbagshotgun',	['label'] = 'Non-Lethal Shotgun',		['weapontype'] = 'Shotgun', ['ammotype'] = 'AMMO_SHOTGUN',	['damagereason'] = 'Hit by a bean bag'},
 	-- GGC Custom Weapons -- Hand Guns
 	[`weapon_glock17`] 		 		= {['name'] = 'weapon_glock17', 			['label'] = 'Glock-17',		    		['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
 	[`weapon_glock18c`] 		 	= {['name'] = 'weapon_glock18c', 			['label'] = 'Glock-18 Custom',		    ['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
@@ -81,8 +77,6 @@
 	['weapon_sledgehammer']     = 0.15,
 	['weapon_karambit']         = 0.15,
 	['weapon_keyboard']         = 0.15,
-	-- GGC Custom Weapons -- Lethals
-    ["weapon_beanbagshotgun"]   = 0.00,
 	-- GGC Custom Weapons -- Hand Guns
 	['weapon_glock17'] 		    = 0.15,
 	['weapon_glock18c'] 		= 0.15,
@@ -111,14 +105,6 @@
 ## Drop the next code in ``qb-weapons/config.lua`` (about line 209)
 ```lua
 
-    -- GGC Custom Weapons -- Lethals
-    ['WEAPON_BEANBAGSHOTGUN'] = {
-        ['defaultclip'] = {
-            component = 'COMPONENT_BEANBAGSHOTGUN_CLIP_01',
-            item = 'pumpshotgun_defaultclip',
-            type = 'clip',
-        },
-    },
 	-- GGC Custom Weapons -- Hand Guns
 	['WEAPON_GLOCK17'] = {
         ['defaultclip'] = {
@@ -294,8 +280,6 @@
     'WEAPON_SLEDGEHAMMER',
     'WEAPON_KARAMBIT',
     'WEAPON_KEYBOARD',
-    -- GGC Custom Weapons -- Lethals
-    'WEAPON_BEANBAGSHOTGUN',
     -- GGC Custom Weapons -- Hand Guns
     'WEAPON_GLOCK17',
     'WEAPON_GLOCK18C',
@@ -338,8 +322,7 @@ local holsterableWeapons = {
 
 ## Drop the next code in ``qb-smallresources/client/recoil.lua`` ( LINE 107 )
 ```lua
-    -- GGC Custom Weapons -- Lethals
-    [GetHashKey("weapon_beanbagshotgun")] = 0.0,
+
 	-- GGC Custom Weapons -- Hand Guns
 	[GetHashKey("weapon_glock17")] = 0.40,
 	[GetHashKey("weapon_glock18c")] = 0.45,
@@ -362,10 +345,12 @@ local holsterableWeapons = {
     [GetHashKey("weapon_aks74")] = 0.75,
     [GetHashKey("weapon_groza")] = 0.75,
     [GetHashKey("weapon_scarh")] = 0.65,
+
 ```
 
 ## Replace the next code in ``qb-ambulancejob/config.lua``
 ```lua
+
     --[[ HIGH CALIBER ]]
     -- GGC Custom Weapons -- Rifles
     [`WEAPON_MK47FM`] = Config.WeaponClasses['HIGH_CALIBER'],
@@ -402,14 +387,12 @@ local holsterableWeapons = {
     [`WEAPON_SLEDGEHAMMER`] = Config.WeaponClasses['HEAVY_IMPACT'],
     [`WEAPON_KEYBOARD`] = Config.WeaponClasses['HEAVY_IMPACT'],
     --[[ Lethals ]]--
-    -- GGC Custom Weapons -- Lethals
-    [`WEAPON_BEANGBAGSHOTGUN`] = Config.WeaponClasses['NONE'],
+
 ```
 
 ## Add this next line of code to your weaponsTable in `ps-dispatch/client/cl_events.lua`
 ```lua
-    -- GGC Custom Weapons -- Lethals
-    [GetHashKey("WEAPON_BEANBAGSHOTGUN")] = "Beanbag Shotgun",
+
 	-- GGC Custom Weapons -- Hand Guns
     [GetHashKey("WEAPON_GLOCK17")] = "CLASS 1: Glock-17",
     [GetHashKey("WEAPON_GLOCK18C")] = "CLASS 2: Glock-18 Custom",
@@ -432,6 +415,7 @@ local holsterableWeapons = {
     [GetHashKey("WEAPON_AKS74")] = "CLASS 3: AKS-74",
     [GetHashKey("WEAPON_GROZA")] = "CLASS 3: OTs-14 Groza",
     [GetHashKey("WEAPON_SCARH")] = "CLASS 3: Scar-H",
+
 ```
 
 ## Add this to your backitems config/client
@@ -463,17 +447,6 @@ local holsterableWeapons = {
         x = -0.0,
         y = -0.17,
         z = 0.08,
-        x_rotation = 0.0,
-        y_rotation = -180.0,
-        z_rotation = 180.0,
-    },
-    -- GGC Custom Weapons -- Lethals
-    ["weapon_beanbagshotgun"] = {
-        model="w_sg_beanbagshotgun",
-        back_bone = 24818,
-        x = 0.0,
-        y = -0.17,
-        z = -0.12,
         x_rotation = 0.0,
         y_rotation = -180.0,
         z_rotation = 180.0,
