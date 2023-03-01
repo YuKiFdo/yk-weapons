@@ -21,7 +21,6 @@
 	['weapon_m1911'] 				 = {['name'] = 'weapon_m1911', 	 			  	['label'] = 'M1911', 					['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_m1911.png',  			['unique'] = true, 		['useable'] = false,	['description'] = 'The M1911 (Colt 1911 or Colt Government) is a single-action, recoil-operated, semi-automatic pistol chambered for the .45 ACP cartridge.'},
     ['weapon_glock20'] 				 = {['name'] = 'weapon_glock20', 	 			['label'] = 'Glock-20', 				['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_glock20.png',  			['unique'] = true, 		['useable'] = false,	['description'] = 'An ambidextrous, reversible magazine latch makes the GLOCK 20 an ideal handgun for right- and left-handed shooters.'},
     ['weapon_glock19gen4'] 			 = {['name'] = 'weapon_glock19gen4', 	 		['label'] = 'Glock-19 Gen 4', 			['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_glock19gen4.png',  		['unique'] = true, 		['useable'] = false,	['description'] = 'The GLOCK 19 Gen4 pistol in 9 mm Luger offers great firepower while allowing to shoot quick and accurately.'},
-    ['weapon_browning'] 		     = {['name'] = 'weapon_browning', 				['label'] = 'Browning', 				['weight'] = 5000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_browning.png', 			['unique'] = true, 		['useable'] = false, 	['description'] = 'The Browning 9-mm pistol is a personal protection weapon used mainly in close-quarter combat.'},
     -- GGC Custom Weapons -- SMGs
     ['weapon_pmxfm'] 				 = {['name'] = 'weapon_pmxfm', 	 			  	['label'] = 'Beretta PMX', 				['weight'] = 11000, 	['type'] = 'weapon', 	['ammotype'] = 'AMMO_SMG',				['image'] = 'weapon_pmxfm.png',  			['unique'] = true, 		['useable'] = false,	['description'] = 'The Beretta PMX is a 9x19mm Parabellum caliber submachine gun, designed and manufactured by the Italian company Beretta.'},
     ['weapon_mac10'] 				 = {['name'] = 'weapon_mac10', 			 		['label'] = 'MAC-10', 					['weight'] = 10000, 	['type'] = 'weapon', 	['ammotype'] = 'AMMO_SMG',				['image'] = 'weapon_mac10.png', 			['unique'] = true, 		['useable'] = false, 	['description'] = 'The Military Armament Corporation Model 10, commonly known as the MAC 10 and also known as the M10 or MAC-10.'},
@@ -58,7 +57,6 @@
 	[`weapon_m1911`] 		 		= {['name'] = 'weapon_m1911', 				['label'] = 'M1911',		    		['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
     [`weapon_glock20`] 		 		= {['name'] = 'weapon_glock20', 			['label'] = 'Glock-20',		    		['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
     [`weapon_glock19gen4`] 		 	= {['name'] = 'weapon_glock19gen4', 		['label'] = 'Glock-19 Gen 4',		    ['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
-    [`weapon_browning`] 		 	= {['name'] = 'weapon_browning', 			['label'] = 'Browning',		    		['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
     -- GGC Custom Weapons -- SMGs
     [`weapon_pmxfm`] 			 	= {['name'] = 'weapon_pmxfm', 				['label'] = 'Beretta PMX', 				['weapontype'] = 'Submachine Gun',	['ammotype'] = 'AMMO_SMG',				['damagereason'] = 'Riddled / Drilled / Finished / Submachine Gunned'},
     [`weapon_mac10`] 			 	= {['name'] = 'weapon_mac10', 				['label'] = 'MAC-10', 					['weapontype'] = 'Submachine Gun',	['ammotype'] = 'AMMO_SMG',				['damagereason'] = 'Riddled / Drilled / Finished / Submachine Gunned'},
@@ -94,7 +92,6 @@
 	['weapon_m1911'] 			= 0.15,
     ['weapon_glock20'] 			= 0.15,
     ['weapon_glock19gen4'] 		= 0.15,
-    ['weapon_browning'] 		= 0.15,
     -- GGC Custom Weapons -- SMGs
     ['weapon_pmxfm'] 			= 0.15,
     ['weapon_mac10'] 			= 0.15,
@@ -186,13 +183,6 @@
         },
     },
     ['WEAPON_GLOCK19GEN4'] = {
-        ['defaultclip'] = {
-            component = 'COMPONENT_PISTOL_CLIP_01',
-            item = 'pistol_defaultclip',
-            type = 'clip',
-        },
-    },
-    ['WEAPON_BROWNING'] = {
         ['defaultclip'] = {
             component = 'COMPONENT_PISTOL_CLIP_01',
             item = 'pistol_defaultclip',
@@ -315,7 +305,6 @@
     'WEAPON_M1911',
     'WEAPON_GLOCK20',
     'WEAPON_GLOCK19GEN4',
-    'WEAPON_BROWNING',
     -- GGC Custom Weapons -- SMGs
     'WEAPON_PMXFM',
     'WEAPON_MAC10',
@@ -344,7 +333,6 @@ local holsterableWeapons = {
 	'WEAPON_M1911',
     'WEAPON_GLOCK20',
     'WEAPON_GLOCK19GEN4',
-    'WEAPON_BROWNING',
 }
 ```
 
@@ -361,7 +349,6 @@ local holsterableWeapons = {
 	[GetHashKey("weapon_m1911")] = 0.30,
     [GetHashKey("weapon_glock20")] = 0.40,
     [GetHashKey("weapon_glock19gen4")] = 0.40,
-    [GetHashKey("weapon_browning")] = 0.40,
 	-- GGC Custom Weapons -- SMGs
     [GetHashKey("weapon_pmxfm")] = 0.50,
     [GetHashKey("weapon_mac10")] = 0.50,
@@ -404,7 +391,6 @@ local holsterableWeapons = {
     [`WEAPON_M1911`] = Config.WeaponClasses['SMALL_CALIBER'],
     [`WEAPON_GLOCK20`] = Config.WeaponClasses['SMALL_CALIBER'],
     [`WEAPON_GLOCK19GEN4`] = Config.WeaponClasses['SMALL_CALIBER'],
-    [`WEAPON_BROWNING`] = Config.WeaponClasses['SMALL_CALIBER'],
     --[[ SHOTGUN ]]
     --[[ CUTTING ]]
     -- GGC Custom Weapons -- Melees
@@ -433,7 +419,6 @@ local holsterableWeapons = {
     [GetHashKey("WEAPON_M1911")] = "CLASS 1: M1911",
     [GetHashKey("WEAPON_GLOCK20")] = "CLASS 1: Glock-20",
     [GetHashKey("WEAPON_GLOCK19GEN4")] = "CLASS 1: Glock-19 Gen 4",
-    [GetHashKey("WEAPON_BROWNING")] = "CLASS 1: Browning",
     -- GGC Custom Weapons -- SMGs
     [GetHashKey("WEAPON_PMXFM")] = "CLASS 2: Beretta PMX",
     [GetHashKey("WEAPON_MAC10")] = "CLASS 2: MAC-10",

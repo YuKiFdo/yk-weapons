@@ -15,7 +15,6 @@ AddTextEntry("WEAPON_FNX45", "FN FNX45")
 AddTextEntry("WEAPON_M1911", "M1911")
 AddTextEntry("WEAPON_GLOCK20", "Glock-20")
 AddTextEntry("WEAPON_GLOCK19GEN4", "Glock-19 Gen 4")
-AddTextEntry("WEAPON_BROWNING", "BROWNING")
 -- SMGs
 AddTextEntry("WEAPON_PMXFM", "Beretta PMX")
 AddTextEntry("WEAPON_MAC10", "MAC-10")
