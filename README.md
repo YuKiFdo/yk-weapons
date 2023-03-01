@@ -34,6 +34,7 @@
     ['weapon_ak74'] 		 		 = {['name'] = 'weapon_ak74', 	 			  	['label'] = 'AK-74', 					['weight'] = 13000, 	['type'] = 'weapon', 	['ammotype'] = 'AMMO_RIFLE',			['image'] = 'weapon_ak74.png', 				['unique'] = true, 		['useable'] = false,	['description'] = 'The AK-74 or Kalashnikov automatic rifle model 1974 is a 5.45mm assault rifle developed in the early 1970s in the Soviet Union.'},
     ['weapon_aks74'] 		 		 = {['name'] = 'weapon_aks74', 	 			  	['label'] = 'AKS-74', 					['weight'] = 13000, 	['type'] = 'weapon', 	['ammotype'] = 'AMMO_RIFLE',			['image'] = 'weapon_aks74.png', 			['unique'] = true, 		['useable'] = false,	['description'] = 'The AKS-74U Short Assault Rifle is a shortened version of the AKS-74 Assault Rifle released in 1979.'},
     ['weapon_groza'] 				 = {['name'] = 'weapon_groza', 			 		['label'] = 'OTs-14 Groza', 			['weight'] = 15000, 	['type'] = 'weapon', 	['ammotype'] = 'AMMO_RIFLE',			['image'] = 'weapon_groza.png', 			['unique'] = true, 		['useable'] = false, 	['description'] = 'The OTs-14 Groza is a Russian selective fire bullpup assault rifle chambered for the 7.62×39 round and the 9×39mm subsonic round.'},
+    ['weapon_scarh'] 				 = {['name'] = 'weapon_scarh', 	 				['label'] = 'Scar-H', 					['weight'] = 14000, 	['type'] = 'weapon', 	['ammotype'] = 'AMMO_RIFLE',			['image'] = 'weapon_scarh.png',  			['unique'] = true, 		['useable'] = false,	['description'] = 'The FN SCAR-H PR are highly accurate semi-auto or selective fire precision rifles for designated marksmen or sniper teams.'},
 
 ```
 
@@ -70,6 +71,7 @@
     [`weapon_ak74`] 		 		= {['name'] = 'weapon_ak74', 	 			['label'] = 'AK-74', 					['weapontype'] = 'Assault Rifle',	['ammotype'] = 'AMMO_RIFLE',			['damagereason'] = 'Ended / Rifled / Shot down / Floored'},
     [`weapon_aks74`] 		 		= {['name'] = 'weapon_aks74', 	 			['label'] = 'AKS-74', 					['weapontype'] = 'Assault Rifle',	['ammotype'] = 'AMMO_RIFLE',			['damagereason'] = 'Ended / Rifled / Shot down / Floored'},
     [`weapon_groza`] 		 		= {['name'] = 'weapon_groza', 	 			['label'] = 'OTs-14 Groza', 			['weapontype'] = 'Assault Rifle',	['ammotype'] = 'AMMO_RIFLE',			['damagereason'] = 'Ended / Rifled / Shot down / Floored'},
+    [`weapon_scarh`] 		 		= {['name'] = 'weapon_scarh', 	 			['label'] = 'Scar-H', 					['weapontype'] = 'Assault Rifle',	['ammotype'] = 'AMMO_RIFLE',			['damagereason'] = 'Ended / Rifled / Shot down / Floored'},
     
 ```
 
@@ -105,6 +107,7 @@
     ['weapon_ak74'] 			= 0.15,
     ['weapon_aks74'] 			= 0.15,
     ['weapon_groza'] 			= 0.15,
+    ['weapon_scarh'] 			= 0.15,
 
 ```
 
@@ -270,6 +273,18 @@
             type = 'clip',
         },
     },
+    ['WEAPON_SCARH'] = {
+        ['defaultclip'] = {
+            component = 'COMPONENT_SCARH_CLIP_01',
+            item = 'assaultrifle_defaultclip',
+            type = 'clip',
+        },
+        ['extendedclip'] = {
+            component = 'COMPONENT_SCARH_CLIP_02',
+            item = 'assaultrifle_extendedclip',
+            type = 'clip',
+        },
+    },
 ```
 
 ## Add this in qb-smallresources/client/weapdraw.lua
@@ -305,6 +320,7 @@
     'WEAPON_AK74',
     'WEAPON_AKS74',
     'WEAPON_GROZA',
+    'WEAPON_SCARH',
 
 ```
 
@@ -350,6 +366,7 @@ local holsterableWeapons = {
     [GetHashKey("weapon_ak74")] = 0.65,
     [GetHashKey("weapon_aks74")] = 0.75,
     [GetHashKey("weapon_groza")] = 0.75,
+    [GetHashKey("weapon_scarh")] = 0.65,
 ```
 
 ## Replace the next code in ``qb-ambulancejob/config.lua``
@@ -364,6 +381,7 @@ local holsterableWeapons = {
     [`WEAPON_AK74`] = Config.WeaponClasses['HIGH_CALIBER'],
     [`WEAPON_AKS74`] = Config.WeaponClasses['HIGH_CALIBER'],
     [`WEAPON_GROZA`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_SCARH`] = Config.WeaponClasses['HIGH_CALIBER'],
     --[[ MEDIUM CALIBER ]]
     -- GGC Custom Weapons -- SMGs
     [`WEAPON_PMXFM`] = Config.WeaponClasses['MEDIUM_CALIBER'],
@@ -420,6 +438,7 @@ local holsterableWeapons = {
     [GetHashKey("WEAPON_AK74")] = "CLASS 3: AK-74",
     [GetHashKey("WEAPON_AKS74")] = "CLASS 3: AKS-74",
     [GetHashKey("WEAPON_GROZA")] = "CLASS 3: OTs-14 Groza",
+    [GetHashKey("WEAPON_SCARH")] = "CLASS 3: Scar-H",
 ```
 
 ## Add this to your backitems config/client
@@ -560,6 +579,16 @@ local holsterableWeapons = {
     },
     ["weapon_scarsc"] = {
         model="w_ar_scarsc",
+        back_bone = 24818,
+        x =  0.12,
+        y = -0.17,
+        z = -0.0,
+        x_rotation = 0.0,
+        y_rotation = 180.0,
+        z_rotation = 0.0,
+    },
+    ["weapon_scarh"] = {
+        model="w_ar_scarh",
         back_bone = 24818,
         x =  0.12,
         y = -0.17,
