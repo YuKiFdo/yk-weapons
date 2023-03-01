@@ -5,8 +5,8 @@
 		<Item>
 			<WeaponSlots>
 				<Item>
-					<OrderNumber value="428"/>
-					<Entry>SLOT_WEAPON_BEANBAG</Entry>
+					<OrderNumber value="401"/>
+					<Entry>SLOT_WEAPON_BEANBAGSHOTGUN</Entry>
 				</Item>
 			</WeaponSlots>
 		</Item>
@@ -15,10 +15,10 @@
 		<Item>
 			<Infos>
 				<Item type="CWeaponInfo">
-					<Name>WEAPON_BEANBAG</Name>
-					<Model>w_sg_beanbag</Model>
+					<Name>WEAPON_BEANBAGSHOTGUN</Name>
+					<Model>w_sg_beanbagshotgun</Model>
 					<Audio>AUDIO_ITEM_PUMPSHOTGUN</Audio>
-					<Slot>SLOT_WEAPON_BEANBAG</Slot>
+					<Slot>SLOT_WEAPON_BEANBAGSHOTGUN</Slot>
 					<DamageType>BULLET</DamageType>
 					<Explosion>
 						<Default>DONTCARE</Default>
@@ -49,7 +49,7 @@
 					<MinHeadShotDistancePlayer value="5.000000"/>
 					<MaxHeadShotDistancePlayer value="40.000000"/>
 					<HeadShotDamageModifierPlayer value="18.000000"/>
-					<Damage value="0.100000"/>
+					<Damage value="0.000000"/>
 					<DamageTime value="0.000000"/>
 					<DamageTimeInVehicle value="0.000000"/>
 					<DamageTimeInVehicleHeadShot value="0.000000"/>
@@ -158,7 +158,7 @@
 					<NetworkPedDamageModifier value="1.000000"/>
 					<NetworkHeadShotPlayerDamageModifier value="1.000000"/>
 					<LockOnRange value="35.000000"/>
-					<WeaponRange value="25.000000"/>
+					<WeaponRange value="40.000000"/>
 					<BulletDirectionOffsetInDegrees value="0.000000"/>
 					<AiSoundRange value="-1.000000"/>
 					<AiPotentialBlastEventRange value="-1.000000"/>
@@ -226,13 +226,12 @@
 					<FirstPersonReticuleStyleHash/>
 					<PickupHash>PICKUP_WEAPON_PUMPSHOTGUN</PickupHash>
 					<MPPickupHash>PICKUP_AMMO_BULLET_MP</MPPickupHash>
-					<HumanNameHash>WEAPON_BEANBAG</HumanNameHash>
+					<HumanNameHash>WEAPON_BEANBAGSHOTGUN</HumanNameHash>
 					<MovementModeConditionalIdle>MMI_2Handed</MovementModeConditionalIdle>
 					<StatName>PUMP</StatName>
 					<KnockdownCount value="-1"/>
 					<KillshotImpulseScale value="1.000000"/>
 					<NmShotTuningSet>Shotgun</NmShotTuningSet>
-					<AttachPoints/>
 					<GunFeedBone/>
 					<TargetSequenceGroup/>
 					<WeaponFlags>CarriedInHand ApplyBulletForce Gun CanLockonOnFoot CanLockonInVehicle CanFreeAim TwoHanded AnimReload AnimCrouchFire UsableOnFoot UsableInCover NoLeftHandIKWhenBlocked AllowCloseQuarterKills NeedsGunCockingInCover HasLowCoverReloads HasLowCoverSwaps ProcessGripAnim TorsoIKForWeaponBlock LongWeapon UseFPSAimIK UseFPSSecondaryMotion</WeaponFlags>

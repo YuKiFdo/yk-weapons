@@ -3,8 +3,8 @@
 <CWeaponModelInfo__InitDataList>
 	<InitDatas>
 		<Item>
-			<modelName>w_sg_beanbag</modelName>
-			<txdName>w_sg_beanbag</txdName>
+			<modelName>w_sg_beanbagshotgun</modelName>
+			<txdName>w_sg_beanbagshotgun</txdName>
 			<ptfxAssetName>NULL</ptfxAssetName>
 			<lodDist value="500"/>
 		</Item>

@@ -5,7 +5,7 @@ AddTextEntry("WEAPON_SLEDGEHAMMER", "Sledge Hammer")
 AddTextEntry("WEAPON_KARAMBIT", "Karambit")
 AddTextEntry("WEAPON_KEYBOARD", "Keyboard")
 -- GGC Custom Weapons -- Lethals
-AddTextEntry("WEAPON_BEANBAG", "Bean Bag")
+AddTextEntry("WEAPON_BEANBAGSHOTGUN", "Beanbag Shotgun")
 -- Hand Guns
 AddTextEntry("WEAPON_GLOCK17", "Glock-17")
 AddTextEntry("WEAPON_GLOCK18C", "Glock-18 Custom")

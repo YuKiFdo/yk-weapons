@@ -11,7 +11,7 @@
     ['weapon_karambit'] 			 = {['name'] = 'weapon_karambit', 			 	['label'] = 'Karambit', 				['weight'] = 1000, 		['type'] = 'weapon', 	['ammotype'] = nil,						['image'] = 'weapon_karambit.png', 		    ['unique'] = true, 		['useable'] = false,	['description'] = 'A short knife with a pointed and edged blade, used as a weapon'},
     ['weapon_keyboard'] 			 = {['name'] = 'weapon_keyboard', 				['label'] = 'Keyboard', 				['weight'] = 3000, 		['type'] = 'weapon', 	['ammotype'] = 'nil',			    	['image'] = 'weapon_keyboard.png', 			['unique'] = true, 		['useable'] = false, 	['description'] = 'YOU CAN USE THIS TO HIT YOUR SON xD'},
     -- GGC Custom Weapons -- Lethals
-	['weapon_beanbag'] 			     = {['name'] = 'weapon_beanbag', 	 	  		['label'] = 'Bean Bag', 				['weight'] = 10000, 	['type'] = 'weapon', 	['ammotype'] = 'AMMO_SHOTGUN',			['image'] = 'weapon_beanbag.png', 			['unique'] = true, 		['useable'] = false, 	['description'] = 'A shotgun? no!'},
+    ['weapon_beanbagshotgun'] 		 = {['name'] = 'weapon_beanbagshotgun', 		['label'] = 'Non-Lethal Shotgun', 		['weight'] = 1000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_SHOTGUN',			['image'] = 'weapon_beanbagshotgun.png', 	['unique'] = true, 		['useable'] = false, 	['description'] = 'A Non-lethal version of the Remington 870'},
 	-- GGC Custom Weapons -- Hand Guns
 	['weapon_glock17'] 				 = {['name'] = 'weapon_glock17', 				['label'] = 'Glock-17', 				['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_glock17.png', 			['unique'] = true, 		['useable'] = false,	['description'] = 'The Glock 17 is the original 9×19mm Parabellum model, with a standard magazine capacity of 17 rounds.'},
 	['weapon_glock18c'] 			 = {['name'] = 'weapon_glock18c', 				['label'] = 'Glock-18C', 				['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_glock18c.png', 			['unique'] = true, 		['useable'] = false,	['description'] = 'The Glock 18C is a selective-fire variant of the Glock 17.'},
@@ -48,7 +48,7 @@
     [`weapon_karambit`] 			= {['name'] = 'weapon_karambit', 			['label'] = 'Karambit', 				['weapontype'] = 'Melee',			['ammotype'] = nil,						['damagereason'] = 'Knifed / Stabbed / Eviscerated'},
     [`weapon_keyboard`] 			= {['name'] = 'weapon_keyboard', 			['label'] = 'Keyboard', 				['weapontype'] = 'Melee',			['ammotype'] = nil,						['damagereason'] = 'Melee killed / Whacked / Executed / Beat down / Murdered / Battered'},
     -- GGC Custom Weapons -- Lethals
-	[`weapon_beanbag`] 				= {['name'] = 'weapon_beanbag', 			['label'] = 'Bean Bag', 				['weapontype'] = 'Shotgun',			['ammotype'] = 'AMMO_SHOTGUN',			['damagereason'] = 'Died'},
+	[`weapon_beanbagshotgun`]		 = {['name'] = 'weapon_beanbagshotgun',	['label'] = 'Non-Lethal Shotgun',		['weapontype'] = 'Shotgun', ['ammotype'] = 'AMMO_SHOTGUN',	['damagereason'] = 'Hit by a bean bag'},
 	-- GGC Custom Weapons -- Hand Guns
 	[`weapon_glock17`] 		 		= {['name'] = 'weapon_glock17', 			['label'] = 'Glock-17',		    		['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
 	[`weapon_glock18c`] 		 	= {['name'] = 'weapon_glock18c', 			['label'] = 'Glock-18 Custom',		    ['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
@@ -84,7 +84,7 @@
 	['weapon_karambit']         = 0.15,
 	['weapon_keyboard']         = 0.15,
 	-- GGC Custom Weapons -- Lethals
-    ["weapon_beanbag"]          = 0.15,
+    ["weapon_beanbagshotgun"]   = 0.00,
 	-- GGC Custom Weapons -- Hand Guns
 	['weapon_glock17'] 		    = 0.15,
 	['weapon_glock18c'] 		= 0.15,
@@ -114,6 +114,14 @@
 ## Drop the next code in ``qb-weapons/config.lua`` (about line 209)
 ```lua
 
+    -- GGC Custom Weapons -- Lethals
+    ['WEAPON_BEANBAGSHOTGUN'] = {
+        ['defaultclip'] = {
+            component = 'COMPONENT_BEANBAGSHOTGUN_CLIP_01',
+            item = 'pumpshotgun_defaultclip',
+            type = 'clip',
+        },
+    },
 	-- GGC Custom Weapons -- Hand Guns
 	['WEAPON_GLOCK17'] = {
         ['defaultclip'] = {
@@ -297,7 +305,7 @@
     'WEAPON_KARAMBIT',
     'WEAPON_KEYBOARD',
     -- GGC Custom Weapons -- Lethals
-    'WEAPON_BEANBAG',
+    'WEAPON_BEANBAGSHOTGUN',
     -- GGC Custom Weapons -- Hand Guns
     'WEAPON_GLOCK17',
     'WEAPON_GLOCK18C',
@@ -343,7 +351,7 @@ local holsterableWeapons = {
 ## Drop the next code in ``qb-smallresources/client/recoil.lua`` ( LINE 107 )
 ```lua
     -- GGC Custom Weapons -- Lethals
-    [GetHashKey("weapon_beanbag")] = 0.1,
+    [GetHashKey("weapon_beanbagshotgun")] = 0.0,
 	-- GGC Custom Weapons -- Hand Guns
 	[GetHashKey("weapon_glock17")] = 0.40,
 	[GetHashKey("weapon_glock18c")] = 0.45,
@@ -407,15 +415,15 @@ local holsterableWeapons = {
     -- GGC Custom Weapons -- Melees
     [`WEAPON_SLEDGEHAMMER`] = Config.WeaponClasses['HEAVY_IMPACT'],
     [`WEAPON_KEYBOARD`] = Config.WeaponClasses['HEAVY_IMPACT'],
-    --[[ Shotguns ]]--
+    --[[ Lethals ]]--
     -- GGC Custom Weapons -- Lethals
-    [`WEAPON_BEANBAG`] = Config.WeaponClasses['SHOTGUN'],
+    [`WEAPON_BEANGBAGSHOTGUN`] = Config.WeaponClasses['NONE'],
 ```
 
 ## Add this next line of code to your weaponsTable in `ps-dispatch/client/cl_events.lua`
 ```lua
     -- GGC Custom Weapons -- Lethals
-    [GetHashKey("WEAPON_GLOCK17")] = "Bean Bag",
+    [GetHashKey("WEAPON_BEANBAGSHOTGUN")] = "Beanbag Shotgun",
 	-- GGC Custom Weapons -- Hand Guns
     [GetHashKey("WEAPON_GLOCK17")] = "CLASS 1: Glock-17",
     [GetHashKey("WEAPON_GLOCK18C")] = "CLASS 2: Glock-18 Custom",
@@ -475,8 +483,8 @@ local holsterableWeapons = {
         z_rotation = 180.0,
     },
     -- GGC Custom Weapons -- Lethals
-    ["weapon_beanbag"] = {
-        model="w_sg_beanbag",
+    ["weapon_beanbagshotgun"] = {
+        model="w_sg_beanbagshotgun",
         back_bone = 24818,
         x = 0.0,
         y = -0.17,
