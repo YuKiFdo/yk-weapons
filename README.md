@@ -1,6 +1,15 @@
 # GGC-Weapons
  Free Weapon Pack for FiveM
 
+# Credits to:
+
+```lua
+NoobySloth & GodsDevelopment69
+
+https://github.com/NoobySloth/Custom-Weapons
+https://github.com/GodsDevelopment69/GD-CustomWeapons
+```
+
 ## Drop first code in ``qb-core/shared/items.lua``
 ```lua
 
