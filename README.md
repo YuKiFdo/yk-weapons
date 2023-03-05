@@ -314,7 +314,7 @@ https://github.com/GodsDevelopment69/GD-CustomWeapons
 
 ```
 
-## Replace the next code in ``qb-smallresources/vonfig.lua``
+## Replace the next code in ``qb-smallresources/config.lua``
 ```lua
 local holsterableWeapons = {
 	-- GGC Custom Weapons -- Hand Guns
@@ -423,7 +423,7 @@ local holsterableWeapons = {
     [GetHashKey("WEAPON_AK74")] = "CLASS 3: AK-74",
     [GetHashKey("WEAPON_AKS74")] = "CLASS 3: AKS-74",
     [GetHashKey("WEAPON_GROZA")] = "CLASS 3: OTs-14 Groza",
-    [GetHashKey("WEAPON_SCARH")] = "CLASS 3: Scar-H",
+    [GetHashKey("WEAPON_SCARH")] = "CLASS 3: Scar-H"
 
 ```
 
